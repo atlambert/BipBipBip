@@ -10,7 +10,7 @@ function Alarm(hour, min) {
 	this.title = "Alarm";
 
 	this.hour = hour;
-	this.minute = minute;
+	this.minute = min;
 	
 	this.enabled = true;
 	
