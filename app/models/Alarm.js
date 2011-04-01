@@ -6,11 +6,14 @@
  * @param {number} hour The hour (0-23) of the alarm
  * @param {number} minute The minute (0-59) of the alarm
  */
-function Alarm(hour, min) {
+function Alarm(hour, minute) {
+	// generate unique id
+	this.id = new Date().getTime();
+	
 	this.title = "Alarm";
 
 	this.hour = hour;
-	this.minute = min;
+	this.minute = minute;
 	
 	this.enabled = true;
 	
@@ -149,6 +152,9 @@ Alarm.prototype.trigger = function() {
  * @param {offset} offset The time offset in minutes from the base alarm
  */
 function ChainAlarm(offset) {
+	// generate unique id
+	this.id = new Date().getTime();
+	
 	this.offset = offset;
 	
 	this.allowSnooze = true;

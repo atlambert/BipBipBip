@@ -1,1 +1,61 @@
-/* TODO: put your application-specific CSS here */
+#alarmList .palm-row {
+	margin: 0;
+	padding: 2px 8px !important;
+	clear: both;
+}
+
+#alarmList .palm-row .details {
+	float: right;
+	margin: 10px 10px 8px 0;
+	color: rgba(64, 64, 64, .7);
+	text-transform: uppercase;
+	position: relative;
+	top: -3px;
+}
+#alarmList .palm-row .details .time {
+	font-size: 12pt;
+	font-weight: bold;
+	text-align: right;
+}
+#alarmList .palm-row .details .days {
+	font-size: 8pt;
+	text-align: center;
+}
+
+#alarmList .palm-row .title {
+	margin: 7px 0;
+}
+
+.scene-fade-top {
+	position: fixed; 
+	top: 0; 
+	z-index: 100000;
+	height: 54px; 
+	width: 100%;
+	background: url(../images/my-scene-fade-top.png) center bottom no-repeat;
+}
+.scene-fade-bottom {
+	position: fixed; 
+	bottom: 54px;
+	z-index: 100000;
+	height: 54px; 
+	width: 100%;
+	background:url(../images/fade-arrow-down.png) center bottom no-repeat;
+	-webkit-palm-mouse-target: ignore;
+}
+.scene-footer-spacer.two-buttons {
+	padding-bottom: 65px;
+}
+
+.scene-footer {
+	position:fixed; 
+	bottom:0px; 
+	left:0px; 
+	right:0px;
+	-webkit-border-image: url(../images/fade-bottom-light-30px.png) 35 0 0 0 repeat repeat;
+	border-width: 35px 0px 0px 0px;
+	-webkit-palm-mouse-target: ignore;
+}
+.scene-footer-wrapper {
+	margin-top:-10px;
+}

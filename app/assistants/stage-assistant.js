@@ -1,17 +1,30 @@
-function StageAssistant() {
-	/* this is the creator function for your stage assistant object */
-}
-
-StageAssistant.prototype.setup = function() {
-	/* this function is for setup tasks that have to happen when the stage is first created */
-	
-	/* for a simple application, the stage assistant's only task is to push the scene, making it
-	   visible */
-	this.controller.pushScene("first");
-	Mojo.Log.info("pushing first scene");
+Bip = {
+	alarms: [],
+	DB: null
 };
 
-Bip = {};
+function StageAssistant() {}
+
+StageAssistant.prototype.setup = function() {
+	var alarm = new Alarm(12,45);
+	alarm.title = "Test Alarm 1";
+	alarm.repeat = ["mon", "wed", "fri"];
+	Bip.alarms.push(alarm);
+	alarm = new Alarm(8,00);
+	alarm.title = "Test Alarm 2";
+	alarm.repeat = [];
+	Bip.alarms.push(alarm);
+	alarm = new Alarm(9,30);
+	alarm.title = "Test Alarm 3";
+	alarm.repeat = ["mon", "tue", "wed", "thu", "fri"];
+	Bip.alarms.push(alarm);
+	alarm = new Alarm(9,30);
+	alarm.title = "Test Alarm 4";
+	alarm.repeat = ["sun", "tue", "wed", "thu", "fri"];
+	Bip.alarms.push(alarm);
+
+	this.controller.pushScene("alarmList");
+};
 
 function AppAssistant() {}
 
@@ -19,5 +32,4 @@ AppAssistant.prototype.handleLaunch = function(params) {
 	 if(params && params.alarm) {
 	 	Bip.alarmSource = params.alarm;
 	 }
-	 Mojo.Log.info(params);
 };

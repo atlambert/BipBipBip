@@ -1,12 +1,16 @@
 [
-    {
-        "source": "app/assistants/stage-assistant.js"
-    },
-    {
-        "source": "app/models/Alarm.js"
-    },
+    {"source": "app/assistants/stage-assistant.js"},
+    {"source": "app/models/Alarm.js"},
     {
         "scenes": "first",
         "source": "app/assistants/first-assistant.js"
+    },
+    {
+        "scenes": "alarmList",
+        "source": "app/assistants/alarmList-assistant.js"
+    },
+    {
+        "scenes": "alarmDetails",
+        "source": "app/assistants/alarmDetails-assistant.js"
     }
 ]
