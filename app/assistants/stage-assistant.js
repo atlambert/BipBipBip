@@ -23,7 +23,8 @@ StageAssistant.prototype.setup = function() {
 	alarm.repeat = ["sun", "tue", "wed", "thu", "fri"];
 	Bip.alarms.push(alarm);
 
-	this.controller.pushScene("alarmList");
+//	this.controller.pushScene("alarmList");
+	this.controller.pushScene("setupQuestions"); // temporary
 };
 
 function AppAssistant() {}
